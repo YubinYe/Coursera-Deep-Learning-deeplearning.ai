@@ -59,8 +59,8 @@ but we can use the ones we have to train the model.
     - You have a large data-mismatch problem because your model does a lot better on the training-dev set than on the dev set.
     - If traingin: 1%, training dev: 5.1%, dev: 5.6%, Test: 6.8%, this is not mismatch problem.
    
-If traingin: 2%, training dev: 2.3%, dev: 1.3%, Test: 1.1%,
-    - False: Bayes error for dev/test is higher than it is in train distribution.
+    > If traingin: 2%, training dev: 2.3%, dev: 1.3%, Test: 1.1%, Bayes error for dev/test is higher than it is in train distribution.
+    - False
     
 7. Based on table from the previous question, a friend thinks that the training data distribution is much easier than the dev/test distribution. What do you think?
 
@@ -99,8 +99,9 @@ If traingin: 2%, training dev: 2.3%, dev: 1.3%, Test: 1.1%,
     
     - So long as the synthesized fog looks realistic to the human eye, you can be confident that the synthesized data is accurately capturing the distribution of real foggy images, since human vision is very accurate for the problem you’re solving.
     
-    > If the synthesized images look realistic, then the model will just see them as if you had added useful data to identify road signs and traffic signals in a foggy weather. I will very likely help.
-    > If duplicate the size of training by adding the synthesized image, the cost of searching for that many fog images might not be worth the improvement. Also, there is a risk of overfitting to the subset of the foggy image.
+    > If the synthesized images look realistic, then the model will just see them as if you had added useful data to identify road signs and traffic signals in a foggy weather.
+    
+    > If adding the synthesized image, it duplicates the size of training, and the cost of searching for that many fog images might not be worth for the improvement. Also, there is a risk of overfitting to the subset of the foggy image.
     
 12. After working further on the problem, you’ve decided to correct the incorrectly labeled data on the dev set. Which of these statements do you agree with? (Check all that apply).
 
