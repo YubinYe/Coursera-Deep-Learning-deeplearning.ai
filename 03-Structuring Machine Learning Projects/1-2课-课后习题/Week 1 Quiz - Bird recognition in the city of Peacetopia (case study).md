@@ -30,6 +30,7 @@
 
     - [ ] True
     - [x] False
+	because as least the data can contribute to training the model.
 
 6. One member of the City Council knows a little about machine learning, and thinks you should add the 1,000,000 citizens’ data images to the test set. You object because:
 
@@ -92,7 +93,7 @@
     What can you conclude? (Check all that apply.)
 
     - It is now harder to measure avoidable bias, thus progress will be slower going forward.
-	  - If the test set is big enough for the 0,05% error estimate to be accurate, this implies Bayes error is ≤0.05
+    - If the test set is big enough for the 0,05% error estimate to be accurate, this implies Bayes error is ≤0.05
 
 13. It turns out Peacetopia has hired one of your competitors to build a system as well. Your system and your competitor both deliver systems with about the same running time and memory size. However, your system has higher accuracy! However, when Peacetopia tries out your and your competitor’s systems, they conclude they actually like your competitor’s system better, because even though you have higher overall accuracy, you have more false negatives (failing to raise an alarm when a bird is in the air). What should you do?
 
