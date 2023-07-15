@@ -246,7 +246,7 @@ $$S_{db} = \beta_2 S_{db} + (1 - \beta_2) {(db)}^2$$
 
 - 一般使用 Adam 算法时需要计算偏差修正：
 
-$$V^{corrected}_{dW} = \frac{V_dW}{1-{\beta_1}^t}$$
+$$V^{corrected}_{dW} = \frac{V_{dW}}{1-{\beta_1}^t}$$
 
 $$V^{corrected}_{db} = \frac{V_db}{1-{\beta_1}^t}$$
 
