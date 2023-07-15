@@ -48,3 +48,10 @@
 10. Why do we normalize the inputs x?
 
     - It makes the cost function faster to optimize
+   
+11. When there is a difference between the ranges of the features normalization,
+    - is most likely to have a positive effect on the training.
+      
+12. More data won't reduce the bias.
+    
+13. In practice, dropout eliminates the probability that dropout doesn't eliminate a neuron is keep_prob.
