@@ -12,7 +12,8 @@
     
     - [ ] True
     - [x] False
-    
+          
+    > we can use sigmoid function for output layer.
     > Softmax would be a good choice if one and only one of the possibilities (stop sign, speed bump, pedestrian crossing, green light and red light) was present in each image.
     
 3. You are carrying out error analysis and counting up what errors the algorithm makes. Which of these datasets do you think you should manually go through and carefully examine, one image at a time?
