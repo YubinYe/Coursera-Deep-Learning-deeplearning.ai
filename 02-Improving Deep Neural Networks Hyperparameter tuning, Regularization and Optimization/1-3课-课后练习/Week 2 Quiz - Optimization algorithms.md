@@ -33,7 +33,8 @@
     
     Say you use an exponentially weighted average with β = 0.5 to track the temperature: v_0 = 0, v_t = βv_t−1 + (1 − β)θ_t. If v_2 is the value computed after day 2 without bias correction, and v^corrected_2 is the value you compute with bias correction. What are these values?
     
-    - v_2 = 7.5, v^corrected_2 = 10
+    - v_1 = 0.5*10, v_2 = 7.5
+    - v_2(corrected) = 7.5/1-0.5*0.5 = 10
     
 6. Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number.
 
@@ -65,3 +66,13 @@
     - Adam should be used with batch gradient computations, not with mini-batches.
     
     Note: Adam could be used with both.
+    
+11. Not a good learning rate decay scheme: any non_decrease function
+
+12. when increase momentum beta from 0.01 to 0.1:
+
+    - reducing the oscillation in horizontal
+    - moving the steps more in vertical
+      
+13. In high dimentional spaces, the gradient descent is more likely to give a local minimum
+    than a saddle point of the cost function. False !
