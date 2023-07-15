@@ -5,7 +5,7 @@
     - [x] False
     - [ ] True
     
-    Note: Try random values, don't do grid search. Because you don't know which hyperparamerters are more important than others.
+    Note: Try random values, don't do grid search. Because you don't know which hyperparamerters are more important than others. If with a small set of hyperparameters like n=1,2,3, it is OK to use gird search
     
     >  And to take an extreme example, let's say that hyperparameter two was that value epsilon that you have in the denominator of the Adam algorithm. So your choice of alpha matters a lot and your choice of epsilon hardly matters.
     
@@ -59,3 +59,11 @@
     - [x] A programming framework allows you to code up deep learning algorithms with typically fewer lines of code than a lower-level language such as Python.
     - [x] Even if a project is currently open source, good governance of the project helps ensure that the it remains open even in the long term, rather than become closed or modified to benefit only one company.
     - [ ] Deep learning programming frameworks require cloud-based machines to run.
+   
+11. when using batch normalization, it is ok to drop the parameter beta^[1] from the forward propagation since it will be subtracted out when we compute z^[l] = gamma z^[l]_normaliza + beta^[l].
+    - since in the normalization process the values of z^[l] are re-centered at the origin, it is irrelevant to add the b^[l] parameter.
+   
+12. The parameters gamma and beta in the batch normalization are different for each layer, no global value used for all the hidden layers.
+
+13. A neural network is trained with batch norm, at test time, to evaluate the neural network we turn off the batch norm to avoid random predictions from the network.
+    - False
