@@ -246,19 +246,19 @@ $$S_{db} = \beta_2 S_{db} + (1 - \beta_2) {(db)}^2$$
 
 - 一般使用 Adam 算法时需要计算偏差修正：
 
-$$V^{corrected}_{dW} = \frac{V_dW}{1-{\beta_1}^t}$$
+$$V_{dW} = \frac{V_dW}{1-{\beta_1}^t}$$
 
-$$V^{corrected}_{db} = \frac{V_db}{1-{\beta_1}^t}$$
+$$V_{db} = \frac{V_db}{1-{\beta_1}^t}$$
 
-$$S^{corrected}_{dW} = \frac{S_dW}{1-{\beta_2}^t}$$
+$$S_{dW} = \frac{S_dW}{1-{\beta_2}^t}$$
 
-$$S^{corrected}_{db} = \frac{S_db}{1-{\beta_2}^t}$$
+$$S_{db} = \frac{S_db}{1-{\beta_2}^t}$$
 
 - 所以，更新 $W$、$b$ 时有：
 
-$$W := W - \alpha \frac{V_corrected_dW}{\sqrt{S_corrected_dW} + \epsilon}$$
+$$W := W - \alpha \frac{V_dW}{\sqrt{S_dW} + \epsilon}$$
 
-$$b := b - \alpha \frac{V_corrected_db}{\sqrt{S^corrected_db} + \epsilon}$$
+$$b := b - \alpha \frac{V_db}{\sqrt{S_db} + \epsilon}$$
 
 （可以看到 Andrew 在这里 $ϵ$ 没有写到平方根里去，和他在 RMSProp 中写的不太一样。考虑到 $ϵ$ 所起的作用，我感觉影响不大）
 
