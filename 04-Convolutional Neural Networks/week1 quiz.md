@@ -85,9 +85,9 @@
 
 7. You have an input volume that is 32x32x16, and apply max pooling with a stride of 2 and a filter size of 2. What is the output volume?
 
- - 15x15x16
+  - 15x15x16
 
-  -> 16x16x16
+  - > 16x16x16
 
   - 32x32x8
 
@@ -127,4 +127,4 @@
 
 > the following images depicts the result of a convolution at the right when using a stride of 1, and the filter is shown right next.![image](https://github.com/YubinYe/Coursera-Deep-Learning-deeplearning.ai/assets/25284440/c34cde41-79ea-4e99-92f3-a7a2ad091465)
 
-    - > it depends on the pixels enclosed by the green square.
+    -> it depends on the pixels enclosed by the green square.
