@@ -126,5 +126,3 @@
   - > Each activation in the next layer depends on only a small number of activations from the previous layer.
 
 > the following images depicts the result of a convolution at the right when using a stride of 1, and the filter is shown right next.![image](https://github.com/YubinYe/Coursera-Deep-Learning-deeplearning.ai/assets/25284440/c34cde41-79ea-4e99-92f3-a7a2ad091465)
-
-    -> it depends on the pixels enclosed by the green square.
