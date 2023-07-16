@@ -3,10 +3,7 @@
 
 
 1. What do you think applying this filter to a grayscale image will do?
-    0  1  1  0
-    1  3  3  1
-   -1 -3 -3 -1
-    0 -1 -1  0
+![image](https://github.com/YubinYe/Coursera-Deep-Learning-deeplearning.ai/assets/25284440/94293216-873b-47e2-9f60-8a40f090db1e)
 
   - Detect horizontal edges
 
