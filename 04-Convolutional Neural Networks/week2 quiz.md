@@ -12,15 +12,20 @@
 
 2. Which of the following do you typically see in a ConvNet? (Check all that apply.)
 
-  > Multiple CONV layers followed by a POOL layer
+  - > Multiple CONV layers followed by a POOL layer
 
-  Multiple POOL layers followed by a CONV layer
+  - Multiple POOL layers followed by a CONV layer
 
-  > FC layers in the last few layers
+  - > FC layers in the last few layers
 
-  FC layers in the first few layers
+  - FC layers in the first few layers
 
-3. In order to be able to build very deep networks, we usually only use pooling layers to downsize the height/width of the activation volumes while convolutions are used with “valid” padding. Otherwise, we would downsize the input of the model too quickly.
+>It is typical for ConvNets to use a POOL layer after some Conv layers; sometimes even one POOL layer after each CONV layer; but is not common to start with POOL layers.
+
+3. In LeNet-5 we can see that as we get into deeper networks, the number of channels increases while the height and width of the volume decreases.
+   - True. since in its implementation only valid convolutions were used, without padding, the height and width of the volume were reduced at each convolution. These were also reduced by the POOL layers, whereas the number of channels was increased from 6 to 16.
+
+4. In order to be able to build very deep networks, we usually only use pooling layers to downsize the height/width of the activation volumes while convolutions are used with “valid” padding. Otherwise, we would downsize the input of the model too quickly.
 
   True
 
@@ -46,13 +51,15 @@ a[l+2]=g(W[l+2]g(W[l+1]a[l]+b[l+1])+bl+2+_______ )+_______
 
 6. Which ones of the following statements on Residual Networks are true? (Check all that apply.)
 
-  > Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks
+  - > Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks
 
-  A ResNet with L layers would have on the order of L2 skip connections in total.
+  - A ResNet with L layers would have on the order of L2 skip connections in total.
 
-  > The skip-connections compute a complex non-linear function of the input to pass to a deeper layer in the network.
+  - The skip-connections compute a complex non-linear function of the input to pass to a deeper layer in the network.
 
-  The skip-connection makes it easy for the network to learn an identity mapping between the input and the output within the ResNet block.
+  - > The skip-connection makes it easy for the network to learn an identity mapping between the input and the output within the ResNet block.
+    
+> very deep neural networks are hard to train and a deeper network does not always imply lower training error. Residual Networks allow us to train very deep neural networks.
 
 7. Suppose you have an input volume of dimension 64x64x16. How many parameters would a single 1x1 convolutional filter have (including the bias)?
 
@@ -93,3 +100,10 @@ a[l+2]=g(W[l+2]g(W[l+1]a[l]+b[l+1])+bl+2+_______ )+_______
   The same techniques for winning computer vision competitions, such as using multiple crops at test time, are widely used in practical deployments (or production system deployments) of ConvNets.
 
   > Parameters trained for one computer vision task are often useful as pretraining for other computer vision tasks.
+
+11. Which of the following are true about Depth wise-separable convolutions?
+   - they combine dethwise convolutions with pointwise convolutions.
+   - they have a lower computational cost than normal convolutions.
+     
+12. MobileNet V2 Bottleneck
+    n * n * 5 ---(30 filters) Expansion ---> n * n * 30 ---Depthwise---> n * n * 30 ---(20 filters)Pointwise---> n * n * 20
