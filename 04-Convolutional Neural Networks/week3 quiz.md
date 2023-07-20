@@ -55,24 +55,8 @@
 
 > This is a problem of semantic segmentation since we need to classify each pixel from the image.
 
-13. Using the Transpose Convolution. fill in the values of X, Y and Z.
-   padding = 1, stride = 2.
-Input: 2x2
-   [1 ,2 ]
-   [3 ,4 ]
-Filter: 3x3
-   [1 ,0 ,-1 ]
-   [1 ,0 ,-1 ]
-   [1 ,0 ,-1 ]
-Resultes: 6x6
-   [  ,  ,  ,  ,  ,  ]
-   [  ,0 ,1 ,0 ,-2,  ]
-   [  ,0 ,X ,0 , Y,  ]
-   [  ,0 ,1 ,0 , Z,  ]
-   [  ,0 ,1 ,0 ,-4,  ]
-   [  ,  ,  ,  ,  ,  ]
-
-X = 2, Y = -6, Z = -4
+13. Using the Transpose Convolution. fill in the values of X, Y and Z. padding = 1, stride = 2
+>- X = 2, Y = -6, Z = -4
 
 14. When using the U-net architecture with an input h × w × c, where c denotes the number of channels, the output will always have the shape h × w. True/False?
 >- False
