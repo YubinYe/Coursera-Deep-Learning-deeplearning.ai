@@ -33,10 +33,47 @@
 
   >  1/9
 
+> Correct. The left box's area is 4 while the right box 's is 6. Their intersection's area is 1. So their union's area is 4 + 6 - 1 = 9 which leads to an intersection over union of 1/9.
+
 9. Suppose you run non-max suppression on the predicted boxes above. The parameters you use for non-max suppression are that boxes with probability ≤ 0.4 are discarded, and the IoU threshold for deciding if two boxes overlap is 0.5. How many boxes will remain after non-max suppression?
 
   >  5
 
+> Correct. The bounding box with probability less than 0.4 should be eliminated.
+
 10. Suppose you are using YOLO on a 19x19 grid, on a detection problem with 20 classes, and with 5 anchor boxes. During training, for each image you will need to construct an output volume y as the target value for the neural network; this corresponds to the last layer of the neural network. (y may include some “?”, or “don’t cares”). What is the dimension of this output volume?
 
   > 19x19x(5x25)
+
+11. if we use anchor boxes in YOLO, we no longer need the coordinates of the bounding box since they are given by the cell position of the grid and the anchor box selection. True/False?
+>- False
+
+>  We use the grid and anchor boxes to improve the capabilities of the algorithm to localize and detect objects, for example, two different objects that intersect, but we still use the bounding box coordinates.
+
+12. we are trying to build a system that assigns a value of 1 to each pixel that is of a part of a tumor from a medical taken from a patient. This is a problem of localization? True/False?
+> False
+
+> This is a problem of semantic segmentation since we need to classify each pixel from the image.
+
+13. Using the Transpose Convolution. fill in the values of X, Y and Z.
+   padding = 1, stride = 2.
+Input: 2x2
+   [1 ,2 ]
+   [3 ,4 ]
+Filter: 3x3
+   [1 ,0 ,-1 ]
+   [1 ,0 ,-1 ]
+   [1 ,0 ,-1 ]
+Resultes: 6x6
+   [  ,  ,  ,  ,  ,  ]
+   [  ,0 ,1 ,0 ,-2,  ]
+   [  ,0 ,X ,0 , Y,  ]
+   [  ,0 ,1 ,0 , Z,  ]
+   [  ,0 ,1 ,0 ,-4,  ]
+   [  ,  ,  ,  ,  ,  ]
+
+X = 2, Y = -6, Z = -4
+
+14. When using the U-net architecture with an input h × w × c, where c denotes the number of channels, the output will always have the shape h × w. True/False?
+>- False
+>  The output of the U-Net architecture can be h × w × k where k is the number of classes.
