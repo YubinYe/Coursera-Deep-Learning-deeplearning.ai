@@ -64,3 +64,6 @@
 - True.
   
 > Neural style transfer compares the high-level features of two images and modifies the pixels of one of them in order to look artistic.
+
+16. you train a ConvNet on a dataset with cats, dogs, birds, and other types of animals. You try to find a filter that strongly responds to horizontal edges. You are more likely to find this filter in layer 6 of the network than in layer 1.
+- True
