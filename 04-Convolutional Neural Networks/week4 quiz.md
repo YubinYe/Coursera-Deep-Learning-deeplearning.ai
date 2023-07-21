@@ -43,4 +43,24 @@
 
   > `30x30x30x32`
 
+11. You want to build a system that receives a person`s face picture and determines if the person is inside a workgroup. You have pictures of all the faces of the people currently in the workgroup, but some members might leave, and some new members might be added. Which of the following do you agree with?
+>- This can be considered as a one-shot learning task.
+>- It will be more efficient to learn a function. d(img1,img2) for this work.
 
+12. using the triple loss you must collect pictures of different faces from only the current members of the teams.
+>- False.
+
+> Although it is necessary to have several pictures of the same person, it is not absolutely necessary that all the pictures only come from current members of the team.
+
+13. which of the following are true about the triple loss?
+- alpha is a hyperparameter that prevents the network from send f(img) always to zeros, not a trainable parameter of the Siamese network.
+- A the anchor image is a hyperparameter of Siamese network.
+- we want that the negetive images are further away from the anchor than the positive.
+  
+14. units that responds more to complex features are more likely to be in deeper layer.
+- True
+
+15. In neural style transfer, we train the pixels of an images, and not the parameters of a network.
+- True.
+  
+> Neural style transfer compares the high-level features of two images and modifies the pixels of one of them in order to look artistic.
