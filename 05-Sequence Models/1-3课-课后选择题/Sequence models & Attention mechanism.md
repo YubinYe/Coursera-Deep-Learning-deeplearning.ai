@@ -10,8 +10,10 @@ This model is a “conditional language model” in the sense that the encoder p
     - [x] Beam search will use up more memory.
     - [x] Beam serach will generally find better solutions(i.e. do a better job maximizing *P(y|x)*)
     - [ ] Beam search will converge after fewer steps.
+          
+> As the beam width decreases, beam search runs more quickly, uses up less memory, and converges after fewer steps, but will generally not find the maximum P(y|x).
 
-3. In machine translation, if we carry out beam search without using sentence normalization, the algorithm will tend to output overly short translations.
+3. In machine translation, if we carry out beam search `without` using sentence normalization, the algorithm will tend to output overly short translations.
 
     - [x] True
     - [ ] False
@@ -34,7 +36,7 @@ Would you expect increasing the beam width B to help correct this example?
       
     >  P(y\*|x) > P(y|x) indicates the error should be attributed to the search algorithm rather than to the RNN.
 
-5. Continuing the example from Q4, suppose you work on your algorithm for a few more weeks, and now find that for the vast majority of examples on which your algorithm makes a mistake, P(y\*|x) > P(y|x) This suggest you should focus your attention on improving the search algorithm.
+5. Continuing the example from Q4, suppose you work on your algorithm for a few more weeks, and now find that for the vast majority of examples on which your algorithm makes a mistake, P(y\*|x) > P(y|x) This suggest you should focus your attention on improving the search algorithm `not RNN`.
 
     - [x] True
     - [ ] False
@@ -47,7 +49,7 @@ Which of the following statements about α<sup><t,t’></sup> are true? Check al
 
     - [x] We expect  α<sup><t,t’></sup> to be generally larger for values of a<t> that are highly relevant to the value the network should output for y<t>. (Not  y<sup><t’></sup>)
     - [ ] We expect  α<sup><t,t’></sup> to be generally larger for values of a<sup><t></sup> that are highly relevant to the value the network should output for y<sup><t’></sup>. (Note the indices in the superscripts.)
-    - [ ] ∑<sub>t</sub> α<sup> <t,t’></sup> =1 (Note the summation is over t.)
+    - [x] ∑<sub>t</sub> α<sup> <t,t’></sup> is equal to the amount of attention y<sup><t’></sup> should pay to a<sup><t’></sup>
     - [x] ∑<sub>t'</sub> α<sup> <t,t’></sup> =1 (Note the summation is over t'.)
     
 7. The network learns where to “pay attention” by learning the values e<sup><t,t’></sup>, which are computed using a small neural network: We can't replace s<sup><t−1></sup> with s<sup>t</sup> as an input to this neural network. This is because s<sup><t></sup> depends on α<sup><t,t’></sup> which in turn depends on e<sup><t,t’></sup> ; so at the time we need to evalute this network, we haven’t computed s<sup><t></sup> yet.
