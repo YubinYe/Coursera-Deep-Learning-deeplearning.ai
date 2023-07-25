@@ -43,7 +43,7 @@ Further, here is the formula for α<sup><t,t’></sup>.
 ![equation](img/6_2.png)
 Which of the following statements about α<sup><t,t’></sup> are true? Check all that apply.
 
-    - [x] We expect  α<sup><t,t’></sup> to be generally larger for values of a<t> that are highly relevant to the value the network should output for y<t’>. (Note the indices in the superscripts.)
+    - [x] We expect  α<sup><t,t’></sup> to be generally larger for values of a<t> that are highly relevant to the value the network should output for y<t>. (Not  y<sup><t’></sup>)
     - [ ] We expect  α<sup><t,t’></sup> to be generally larger for values of a<sup><t></sup> that are highly relevant to the value the network should output for y<sup><t’></sup>. (Note the indices in the superscripts.)
     - [ ] ∑<sub>t</sub> α<sup> <t,t’></sup> =1 (Note the summation is over t.)
     - [x] ∑<sub>t'</sub> α<sup> <t,t’></sup> =1 (Note the summation is over t'.)
