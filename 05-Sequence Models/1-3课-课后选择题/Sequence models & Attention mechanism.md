@@ -80,3 +80,38 @@ __c_oo_o_kk___b_ooooo__oo__kkk
     - [ ] Whether someone has just finished saying the trigger word at time t.
 
 > In trigger word detection, if the target label for x<sup><t></sup> is 1: whether or not a trigger word has been said.
+
+
+Transformer
+1. A Transformer Network, unlike its predecessor RNNs, GRUs, and LSTMs, can process entire sentences all at the same time.
+> True
+
+2. The major innovation of the transformer architechture is combining the use of LSTMs and RNN sequential processing.
+> False
+> The major innovation of the transformer architecture is combining the use of attention based representations and a CNN convolutional neural network style of processing. To revise the concept watch the lecture .
+
+3. What are the key inputs to computing the attention value for each word.
+> the key inputs to computing the attention value for each word are called the query, key and value.
+
+4. What letter dose the ? represent in attention(Q,K,V) = softmax[ QK^T / (d?)^0.5 ] V?
+> k
+
+5. Are the following statements true regarding
+Query(Q) = interesting questions about the words in a sentence
+Key(K) = qualities of words given a Q
+Value(V) = specific representations of words given a Q
+> True
+
+6. what does i represent in this multi-head attention computation?
+The computed attention weight matrix associated with nnn
+
+7. decoder second block of multi-head attention?
+feed forward neural network, mutil-head attention
+
+8. Following is the architecture within a Transformer Network.
+what dose the output of the encoder block contain?
+> contextual semantic embedding and positional encoding information
+
+10.which of the following is a good criterion for a good positional encoding algorithm?
+Distance between any two time-steps should be consistent for all sentence lengths.
+The algorithm shoudl be able to generalize to longer sentences.
