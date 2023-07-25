@@ -31,6 +31,8 @@ Would you expect increasing the beam width B to help correct this example?
     - [ ] No, because P(y\*|x) ≤ P(y|x) indicates the error should be attributed to the search algorithm rather than to the RNN.
     - [ ] Yes, because P(y\*|x) ≤ P(y|x) indicates the error should be attributed to the RNN rather than to the search algorithm.
     - [ ] Yes, because  P(y\*|x) ≤ P(y|x) indicates the error should be attributed to the search algorithm rather than to the RNN.
+      
+    >  P(y\*|x) > P(y|x) indicates the error should be attributed to the search algorithm rather than to the RNN.
 
 5. Continuing the example from Q4, suppose you work on your algorithm for a few more weeks, and now find that for the vast majority of examples on which your algorithm makes a mistake, P(y\*|x) > P(y|x) This suggest you should focus your attention on improving the search algorithm.
 
@@ -66,6 +68,8 @@ __c_oo_o_kk___b_ooooo__oo__kkk
     - [ ] cook book
     - [ ] coookkboooooookkk
 
+    > The basic rule for the CTC cost function is to collapse repeated characters not separated by "blank". If a character is repeated, but separated by a “blank”, it is included in the string.
+    
 10. In trigger word detection, x<sup><t></sup> is:
 
     - [x] Features of the audio (such as spectrogram features) at time t.
@@ -73,3 +77,4 @@ __c_oo_o_kk___b_ooooo__oo__kkk
     - [ ] Whether the trigger word is being said at time t.
     - [ ] Whether someone has just finished saying the trigger word at time t.
 
+> In trigger word detection, if the target label for x<sup><t></sup> is 1: whether or not a trigger word has been said.
