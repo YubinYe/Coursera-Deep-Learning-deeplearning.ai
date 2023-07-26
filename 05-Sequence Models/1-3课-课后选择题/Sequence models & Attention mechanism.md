@@ -91,9 +91,10 @@ __c_oo_o_kk___b_ooooo__oo__kkk
 
 
 
+#
+#
 
-
-Transformer
+# Transformer
 
 1. A Transformer Network, unlike its predecessor RNNs, GRUs, and LSTMs, can process entire sentences all at the same time.
 > True
