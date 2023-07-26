@@ -13,7 +13,7 @@ This model is a “conditional language model” in the sense that the encoder p
           
 > As the beam width decreases, beam search runs more quickly, uses up less memory, and converges after fewer steps, but will generally not find the maximum P(y|x).
 
-3. In machine translation, if we carry out beam search `without` using sentence normalization, the algorithm will tend to output overly short translations.
+3. In machine translation, if we carry out beam search `without` using sentence normalization, the algorithm will tend to output overly `short` translations.
 
     - [x] True
     - [ ] False
@@ -82,7 +82,19 @@ __c_oo_o_kk___b_ooooo__oo__kkk
 > In trigger word detection, if the target label for x<sup><t></sup> is 1: whether or not a trigger word has been said.
 
 
+11. The attention model performs the same as the encoder-decoder model, no matter the sentence length?
+> False
+> The performance of the encoder-decoder model declines as the amount of words increases. The attention model has the greatest advantage when the input sequence length Tx is large.
+
+12. In trigger word detection, x<sup><t></sup> represents the trigger word x being stated for the t-th time.
+> True
+
+
+
+
+
 Transformer
+
 1. A Transformer Network, unlike its predecessor RNNs, GRUs, and LSTMs, can process entire sentences all at the same time.
 > True
 
